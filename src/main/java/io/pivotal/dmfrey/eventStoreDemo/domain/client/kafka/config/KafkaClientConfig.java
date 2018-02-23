@@ -18,6 +18,8 @@ import org.springframework.kafka.core.StreamsBuilderFactoryBean;
 @EnableAutoConfiguration
 public class KafkaClientConfig {
 
+    public static final String BOARD_EVENTS_SNAPSHOTS = "board-events-snapshots";
+
     @Bean
     @Primary
     public BoardClient boardClient(

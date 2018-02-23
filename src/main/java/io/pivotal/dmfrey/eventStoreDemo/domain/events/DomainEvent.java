@@ -1,6 +1,7 @@
 package io.pivotal.dmfrey.eventStoreDemo.domain.events;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.Data;
@@ -40,11 +41,13 @@ public abstract class DomainEvent {
 
     }
 
+    @JsonProperty( "occurredOn" )
     public Instant occurredOn() {
 
         return when;
     }
 
+    @JsonProperty( "eventType" )
     public abstract String eventType();
 
 }

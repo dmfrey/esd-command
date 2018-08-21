@@ -1,3 +1,4 @@
+package contracts.api
 
 org.springframework.cloud.contract.spec.Contract.make {
 

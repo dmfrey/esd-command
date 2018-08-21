@@ -44,7 +44,6 @@ spring:
     stream:
       bindings:
         output:
-          binder: kafka
           destination: board-events
           contentType: application/json
           producer:
